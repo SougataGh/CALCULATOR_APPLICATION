@@ -6,10 +6,10 @@ using namespace std;
 
 class Calculator {
 protected:
-    void add();
-    void substract();
-    void multiply();
-    void division();
+   virtual void add();
+   virtual void substract();
+   virtual void multiply();
+   virtual void division();
 
 public:
     void choose_from_calc();
