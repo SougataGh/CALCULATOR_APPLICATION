@@ -1,8 +1,9 @@
 // Member function definitions for Calculator class
 void Calculator::add() {
+    check_Validity cv;
     double x, y;
     cout << "ENTER TWO NUMBERS : ";
-    cin >> x >> y;
+    cv.Check(x,y);
     cout << "(" << x << "+" << y << ") = " << (x + y) << endl;
 }
 
@@ -10,37 +11,21 @@ void Calculator::substract() {
     double x, y;
     cout << "ENTER TWO NUMBERS : ";
     // Check if the extraction is successful
-    while (!(cin >> x>>y))
-    {
-        cout << "INAVID INPUT.PLEASE ENTER COORECT INPUT\n";
-        cin.clear();
-        cin.ignore();
-    }
+    cv.Check(x,y);
     cout << "(" << x << "-" << y << ") = " << (x - y) << endl;
 }
 
 void Calculator::multiply() {
     double x, y;
     cout << "ENTER TWO NUMBERS : ";
-    while (!(cin >> x>>y))
-    {
-        cout << "INAVID INPUT.PLEASE ENTER COORECT INPUT\n";
-        cin.clear();
-        cin.ignore();
-    }
+    cv.Check(x,y);
     cout << "(" << x << "*" << y << ") = " << (x * (double)y) << endl;
 }
 
 void Calculator::division() {
     double x, y;
     cout << "ENTER TWO NUMBERS : ";
-   while (!(cin >> x>>y))
-    {
-        cout << "INAVID INPUT.PLEASE ENTER COORECT INPUT\n";
-
-        cin.clear();
-        cin.ignore();
-    }
+   cv.Check(x,y);
     if (y == 0) {
         cout << "CAN'T DIVIDE BY 0\n";
         return;
