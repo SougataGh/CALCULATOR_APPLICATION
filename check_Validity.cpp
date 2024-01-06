@@ -1,4 +1,4 @@
-void check_Validity::Check(int &x){
+void check_Validity::Check(double &x){
 			while (!(cin >> x))
            {
 	             cout << "Invalid input. Please enter correct numbers.\n";
