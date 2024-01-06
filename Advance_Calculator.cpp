@@ -1,5 +1,6 @@
 // Member function definitions for Advance_Calculator class
 void Advance_Calculator::add() {
+    check_Validity cv;
     double res = 0;
     cout << "ENTER HOW MANY NUMBERS YOU WANT TO ADD : ";
     int n;
@@ -8,7 +9,7 @@ void Advance_Calculator::add() {
     string str = "";
     for (int i = 0; i < n; i++) {
         double x;
-        cin >> x;
+        cv.Check(x);
         string tmp = to_string(x);
         str += tmp;
         if (i < n - 1) {
