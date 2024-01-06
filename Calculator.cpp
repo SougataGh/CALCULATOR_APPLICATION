@@ -9,21 +9,38 @@ void Calculator::add() {
 void Calculator::substract() {
     double x, y;
     cout << "ENTER TWO NUMBERS : ";
-    cin >> x >> y;
+    // Check if the extraction is successful
+    while (!(cin >> x>>y))
+    {
+        cout << "INAVID INPUT.PLEASE ENTER COORECT INPUT\n";
+        cin.clear();
+        cin.ignore();
+    }
     cout << "(" << x << "-" << y << ") = " << (x - y) << endl;
 }
 
 void Calculator::multiply() {
     double x, y;
     cout << "ENTER TWO NUMBERS : ";
-    cin >> x >> y;
+    while (!(cin >> x>>y))
+    {
+        cout << "INAVID INPUT.PLEASE ENTER COORECT INPUT\n";
+        cin.clear();
+        cin.ignore();
+    }
     cout << "(" << x << "*" << y << ") = " << (x * (double)y) << endl;
 }
 
 void Calculator::division() {
     double x, y;
     cout << "ENTER TWO NUMBERS : ";
-    cin >> x >> y;
+   while (!(cin >> x>>y))
+    {
+        cout << "INAVID INPUT.PLEASE ENTER COORECT INPUT\n";
+
+        cin.clear();
+        cin.ignore();
+    }
     if (y == 0) {
         cout << "CAN'T DIVIDE BY 0\n";
         return;
