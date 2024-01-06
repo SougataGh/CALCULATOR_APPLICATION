@@ -174,7 +174,7 @@ void Advance_Calculator::logr() {
         return;
     }
 }
-void Advance_Calculator::void show_History() {
+void Advance_Calculator::show_History() {
     fstream file;
     file.open("Calculator_history.txt", ios::in);
     if (!file) {
@@ -188,7 +188,7 @@ void Advance_Calculator::void show_History() {
     }
     file.close();
 }
-void Advance_Calculator::void choose_from_Advcalc() {
+void Advance_Calculator::choose_from_Advcalc() {
     cout << "---------------------------------------\n";
     cout << "1) ADD \n";
     cout << "2) SUBSTRACT\n";
