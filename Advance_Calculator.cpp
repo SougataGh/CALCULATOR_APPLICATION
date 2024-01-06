@@ -26,6 +26,7 @@ void Advance_Calculator::add() {
 }
 
 void Advance_Calculator::substract() {
+    check_Validity cv;
     double res = 0;
     cout << "ENTER HOW MANY NUMBERS YOU WANT TO SUBSTRACT : ";
     int n;
@@ -34,7 +35,7 @@ void Advance_Calculator::substract() {
     string str = "";
     for (int i = 0; i < n; i++) {
         double x;
-        cin >> x;
+        cv.Check(x);
         string tmp = to_string(x);
         str += tmp;
         if (i < n - 1) {
@@ -51,6 +52,7 @@ void Advance_Calculator::substract() {
 }
 
 void Advance_Calculator::multiply() {
+    check_Validity cv;
     double res = 1;
     cout << "ENTER HOW MANY NUMBERS YOU WANT TO MULTIPLY : ";
     int n;
@@ -59,7 +61,7 @@ void Advance_Calculator::multiply() {
     string str = "";
     for (int i = 0; i < n; i++) {
         double x;
-        cin >> x;
+        cv.Check(x);
         string tmp = to_string(x);
         str += tmp;
         if (i < n - 1) {
@@ -76,6 +78,7 @@ void Advance_Calculator::multiply() {
 }
 
 void Advance_Calculator::division() {
+    check_Validity cv;
     double res = 1;
     cout << "ENTER HOW MANY NUMBERS YOU WANT TO DIVIDE : ";
     int n;
@@ -85,7 +88,7 @@ void Advance_Calculator::division() {
     string str = "";
     for (int i = 0; i < n; i++) {
         double x;
-        cin >> x;
+       cv.Check(x);
         if (x == 0) {
             f = 0;
         }
@@ -110,9 +113,10 @@ void Advance_Calculator::division() {
 }
 
 void Advance_Calculator::modulo() {
+    check_Validity cv;
     cout << "ENTER THE DIVIDEND & DIVISOR : ";
     int x, y;
-    cin >> x >> y;
+    cv.Check(x,y);
     if (y <= 0 || x < 0) {
         cout << "INAVLID DATA....!\n";
         return;
@@ -127,9 +131,10 @@ void Advance_Calculator::modulo() {
 }
 
 void Advance_Calculator::power() {
+    check_Validity cv;
     double base, exponent;
     cout << "ENTER BASE & EXPONENT : ";
-    cin >> base >> exponent;
+    cv.Check(base,exponent);
     double res = pow(base, exponent);
     cout << "(" << base << "^" << exponent << ") = " << res;
     string rs = to_string(res);
@@ -140,9 +145,10 @@ void Advance_Calculator::power() {
 }
 
 void Advance_Calculator::squareRoot() {
+    check_Validity cv;
     double a;
     cout << "ENTER THE NUMBER : ";
-    cin >> a;
+    cv.Check(a);
     if (a >= 0) {
         double res = sqrt(a);
         cout << "RESULT = " << res << endl;
@@ -157,9 +163,10 @@ void Advance_Calculator::squareRoot() {
     }
 }
 void Advance_Calculator::logr() {
+    check_Validity cv;
     double base, nm;
     cout << "ENTER THE NUMBER & BASE RESPECTIVELY : ";
-    cin >> nm >> base;
+    cv.Check(nm,base);
     if (base > 0 && nm > 0) {
         double x = log(nm);
         double y = log(base);
