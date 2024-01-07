@@ -1,7 +1,6 @@
 //Main Function detailing 
 int main() {
     Advance_Calculator acl;
-    // Advance_Calculator acl;
     while (1) {
         system("cls");
         cout << "-----------------------------------------\n";
