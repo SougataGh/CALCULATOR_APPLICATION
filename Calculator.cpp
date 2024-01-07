@@ -8,6 +8,7 @@ void Calculator::add() {
 }
 
 void Calculator::substract() {
+    check_Validity cv;
     double x, y;
     cout << "ENTER TWO NUMBERS : ";
     // Check if the extraction is successful
@@ -16,6 +17,7 @@ void Calculator::substract() {
 }
 
 void Calculator::multiply() {
+    check_Validity cv;
     double x, y;
     cout << "ENTER TWO NUMBERS : ";
     cv.Check(x,y);
@@ -23,6 +25,7 @@ void Calculator::multiply() {
 }
 
 void Calculator::division() {
+    check_Validity cv;
     double x, y;
     cout << "ENTER TWO NUMBERS : ";
    cv.Check(x,y);
