@@ -6,6 +6,8 @@
 #include<fstream>
 #include<cmath>
 
+using namespace std;
+
 void Advance_Calculator::add() {
     check_Validity cv;
     double res = 0;
