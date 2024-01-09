@@ -1,4 +1,11 @@
 // Member function definitions for Advance_Calculator class
+#include "Calculator.h"
+#include "check_Validity.h"
+#include "Advance_Calculator.h"
+#include<iostream>
+#include<fstream>
+#include<cmath>
+
 void Advance_Calculator::add() {
     check_Validity cv;
     double res = 0;
