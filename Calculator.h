@@ -1,8 +1,3 @@
-#include <cmath>
-#include <fstream>
-#include <iostream>
-#include <string.h>
-using namespace std;
 
 class Calculator {
 protected:
