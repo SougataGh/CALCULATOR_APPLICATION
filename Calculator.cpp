@@ -1,4 +1,6 @@
 // Member function definitions for Calculator class
+#include "Calculator.h"
+using namespace std;
 void Calculator::add() {
     check_Validity cv;
     double x, y;
