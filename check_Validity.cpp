@@ -1,3 +1,4 @@
+#include "check_Validity.hpp"
 void check_Validity::Check(double &x){
 	                //loops until sucessful extraction
 			while (!(cin >> x))
