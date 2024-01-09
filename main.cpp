@@ -1,4 +1,14 @@
 //Main Function detailing 
+
+#include "Calculator.h"
+#include "check_Validity.h"
+#include "Advance_Calculator.h"
+#include<iostream>
+#include<fstream>
+#include<cmath>
+
+using namespace std;
+
 int main() {
     Advance_Calculator acl;
     while (1) {
